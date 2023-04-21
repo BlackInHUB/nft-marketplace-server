@@ -19,4 +19,6 @@ router.patch('/update',
 
 router.get('/current', authenticate, asyncWrapper(controllers.current));
 
+router.get('/all', asyncWrapper(controllers.allUsers));
+
 module.exports = router;

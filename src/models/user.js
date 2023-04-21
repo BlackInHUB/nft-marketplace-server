@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema({
     },
     avatarUrl: {
         type: String,
+        default: 'https://res.cloudinary.com/dazfphdfk/image/upload/v1681052126/avatarUrl/4ccba907-94f4-497e-b412-ff20f6ca05cb-no-avatar.png'
     },
     socialLinks: {
         type: Array,
@@ -37,6 +38,9 @@ const userSchema = new mongoose.Schema({
         type: [
             {type: mongoose.Schema.Types.ObjectId, ref: "Nft"}
         ]
+    },
+    created: {
+        type: Array
     },
     iFollow: {
         type: [
