@@ -12,8 +12,8 @@ const nftSchema = new mongoose.Schema({
     description: {
         type: String
     },
-    createdAt: {
-        type: String
+    details: {
+        type: Object
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
@@ -21,9 +21,7 @@ const nftSchema = new mongoose.Schema({
         required: true
     },
     tags: {
-        type: [
-            {type: String}
-        ]
+        type: String
     },
     price: {
         type: String,
@@ -41,7 +39,7 @@ const nftSchema = new mongoose.Schema({
         type: String,
         enum: ['on-sale', 'sold', 'auction']
     }
-}, {versionKey: false});
+}, {versionKey: false, timestamps: true});
 
 const Nft = mongoose.model('Nft', nftSchema);
 

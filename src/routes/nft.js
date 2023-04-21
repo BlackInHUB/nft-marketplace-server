@@ -6,5 +6,6 @@ const controllers = require('../controllers/nft');
 const router = new express.Router();
 
 router.post('/add', authenticate, upload.single('imageUrl'), asyncWrapper(controllers.add));
+router.get('/:category', authenticate, asyncWrapper(controllers.getUsers));
 
 module.exports = router;
