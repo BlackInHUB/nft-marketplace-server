@@ -7,7 +7,7 @@ const add = async (req, res) => {
 
     const {url: imageUrl} = await toCloude(path, fieldname, filename);
 
-    const newNft = await Nft.create({...req.body, author, imageUrl});
+    const newNft = await Nft.create({...req.body, author, imageUrl, details: JSON.parse(req.body.details[0])});
     await User.findByIdAndUpdate({_id: author}, {$push: {"created": newNft._id}});
 
     res.status(201).json({
