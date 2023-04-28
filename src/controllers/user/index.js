@@ -4,6 +4,8 @@ const logout = require('./logout');
 const update = require('./update');
 const current = require('./current')
 const allUsers = require('./allUsers');
+const getProfile = require('./getProfile');
+const following = require('./following');
 
 module.exports = {
     register,
@@ -11,5 +13,7 @@ module.exports = {
     logout,
     update,
     current,
-    allUsers
+    allUsers,
+    getProfile,
+    following
 };

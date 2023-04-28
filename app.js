@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(morgan('tiny'));
 
 app.use('/user', routers.user);
-app.use('/nft', routers.nft);
+app.use('/nfts', routers.nft);
 
 app.use((req, res) => {
     res.status(404).json({message: 'Not found'});

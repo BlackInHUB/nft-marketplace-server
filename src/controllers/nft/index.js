@@ -1,9 +1,13 @@
 const getAll = require('./getAll');
 const add = require('./add');
-const getUsers = require('./getUsers');
+const getUsersNft = require('./getUsersNft');
+const getDetails = require('./getDetails');
+const getProfileNft = require('./getProfileNft');
 
 module.exports = {
     getAll,
     add,
-    getUsers
+    getUsersNft,
+    getDetails,
+    getProfileNft   
 };

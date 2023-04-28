@@ -21,4 +21,8 @@ router.get('/current', authenticate, asyncWrapper(controllers.current));
 
 router.get('/all', asyncWrapper(controllers.allUsers));
 
+router.get('/profile/:_id', authenticate, asyncWrapper(controllers.getProfile));
+
+router.get('/following/:_id', authenticate, asyncWrapper(controllers.following));
+
 module.exports = router;
