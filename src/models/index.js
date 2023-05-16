@@ -1,6 +1,6 @@
 const User = require('./user');
 const Nft = require('./nft');
-const NftSet = require('./NftSet');
+const NftSet = require('./nftSet');
 const Auction = require('./auction');
 
 module.exports = {
