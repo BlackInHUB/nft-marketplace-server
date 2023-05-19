@@ -5,6 +5,7 @@ const getDetails = require('./getDetails');
 const getProfileNft = require('./getProfileNft');
 const deleteNft = require('./deleteNft');
 const update = require('./update');
+const getHighlight = require('./getHighlight');
 
 module.exports = {
     getAll,
@@ -13,5 +14,6 @@ module.exports = {
     getDetails,
     getProfileNft,
     deleteNft,
-    update
+    update,
+    getHighlight
 };

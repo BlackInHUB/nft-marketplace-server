@@ -40,7 +40,9 @@ const userSchema = new mongoose.Schema({
         ]
     },
     created: {
-        type: Array
+        type: [
+            {type: mongoose.Schema.Types.ObjectId, ref: "Nft"}
+        ]
     },
     iFollow: {
         type: [
