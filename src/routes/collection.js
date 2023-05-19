@@ -15,4 +15,6 @@ router.get('/delete/:_id', authenticate, asyncWrapper(controllers.deleteCollecti
 
 router.patch('/update/:_id', authenticate, asyncWrapper(controllers.update));
 
+router.get('/trending', asyncWrapper(controllers.getTrending));
+
 module.exports = router;

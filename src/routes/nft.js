@@ -19,4 +19,6 @@ router.get('/delete/:_id', authenticate, asyncWrapper(controllers.deleteNft));
 
 router.patch('/update/:_id', authenticate, asyncWrapper(controllers.update));
 
+router.get('/highlight', asyncWrapper(controllers.getHighlight));
+
 module.exports = router;
