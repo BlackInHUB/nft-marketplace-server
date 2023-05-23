@@ -21,4 +21,6 @@ router.patch('/update/:_id', authenticate, asyncWrapper(controllers.update));
 
 router.get('/highlight', asyncWrapper(controllers.getHighlight));
 
+router.get('/trending', asyncWrapper(controllers.getTrending));
+
 module.exports = router;

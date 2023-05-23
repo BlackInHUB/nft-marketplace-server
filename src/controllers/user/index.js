@@ -3,9 +3,10 @@ const login = require('./login');
 const logout = require('./logout');
 const update = require('./update');
 const current = require('./current')
-const allUsers = require('./allUsers');
+const getTopRanked = require('./getTopRanked');
 const getProfile = require('./getProfile');
 const following = require('./following');
+const getRankings = require('./getRankings');
 
 module.exports = {
     register,
@@ -13,7 +14,8 @@ module.exports = {
     logout,
     update,
     current,
-    allUsers,
+    getTopRanked,
     getProfile,
-    following
+    following,
+    getRankings
 };
