@@ -19,7 +19,9 @@ router.patch('/update',
 
 router.get('/current', authenticate, asyncWrapper(controllers.current));
 
-router.get('/all', asyncWrapper(controllers.allUsers));
+router.get('/ranked/top', asyncWrapper(controllers.getTopRanked));
+
+router.get('/ranked/all', asyncWrapper(controllers.getRankings));
 
 router.get('/profile/:_id', authenticate, asyncWrapper(controllers.getProfile));
 

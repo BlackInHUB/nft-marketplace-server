@@ -9,6 +9,7 @@ const add = async (req, res) => {
 
     const newNft = await Nft.create({...req.body, author, imageUrl, details: JSON.parse(req.body.details[0])});
     await User.findByIdAndUpdate({_id: author}, {$push: {"created": newNft._id}});
+    await Nft.populate(newNft, {path: 'author', select: {'avatarUrl': 1, 'name': 1}});
 
     res.status(201).json({
         _id: newNft._id,

@@ -1,6 +1,6 @@
 const {User} = require('../../models');
 
-const allUsers = async (req, res) => {
+const getRankings = async (req, res) => {
     const users = await User.aggregate([
         {'$project': {
             'name': 1,
@@ -8,12 +8,12 @@ const allUsers = async (req, res) => {
             'created': 1,
             'createdVolume': {'$size': '$created'}
         }},
-        {'$sort': {'createdVolume': -1}}
+        {'$sort': {'createdVolume': -1}},
     ]);
 
-    const result = users.length > 12 ? users.slice(0, 12) : users;
+    await User.populate(users, {path: 'created', select: {'price': 1}});
 
-    res.status(200).json(result);
+    res.status(200).json(users);
 };
 
-module.exports = allUsers;
+module.exports = getRankings;

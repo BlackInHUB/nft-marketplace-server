@@ -6,6 +6,7 @@ const getProfileNft = require('./getProfileNft');
 const deleteNft = require('./deleteNft');
 const update = require('./update');
 const getHighlight = require('./getHighlight');
+const getTrending = require('./getTrending');
 
 module.exports = {
     getAll,
@@ -15,5 +16,6 @@ module.exports = {
     getProfileNft,
     deleteNft,
     update,
-    getHighlight
+    getHighlight,
+    getTrending
 };
